@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// global constants so all functions can use them
+// global constants 
 const int NUM_ROWS = 3,
           NUM_COLS = 3;
 
@@ -20,6 +20,7 @@ bool isWinner(char [][NUM_COLS]);
 int main()
 {
     int winnerNumber = 0;
+    // asterisks indicate empty spaces
     char gameBoard[NUM_ROWS][NUM_COLS] = {{'*','*','*'},
                                           {'*','*','*'},
                                           {'*','*','*'}};
@@ -64,7 +65,7 @@ int main()
     return 0;
 }
 
-// explains tic tac toe and gets player names
+// explains tic tac toe 
 void instructions()
 {
     cout << "Welcome to Tic-Tac-Toe! Player 1 will be playing with 'X's and \n"
@@ -83,7 +84,8 @@ void dispBoard(char board[][NUM_COLS])
     }
 }
 
-// checks if an integer input value is between min and max value
+/* checks if an integer input value is between min and max value, prompts for new
+   one if if it's not */
 bool isVal(int &userEntry, int minVal, int maxVal)
 {
     while (userEntry < minVal || userEntry > maxVal)
@@ -102,7 +104,6 @@ void userMove(char board[][NUM_COLS], int playerNum)
 {
     int userRow, userCol;
     bool rowValid, colValid;
-
 
     cout << "Player " << playerNum << ", where would you like to place your marker?\n"
          << "Enter the row number: ";
